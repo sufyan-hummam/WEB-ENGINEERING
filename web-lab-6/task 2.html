@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Loan Calculator</h2>
+        <input type="number" id="loanAmount" placeholder="Enter Loan Amount">
+        <button onclick="calculateLoan()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateLoan() {
+            let Loan = parseFloat(document.getElementById("loanAmount").value);
+            let interest;
+
+            if (Loan <= 10000) {
+                interest = Loan * 0.05;
+            } else if (Loan <= 50000) {
+                interest = Loan * 0.04;
+            } else {
+                interest = Loan * 0.035;
+            }
+
+            let totalAmount = Loan + interest;
+
+            document.getElementById("result").innerHTML = `
+                <p>Loan Amount: $${Loan.toFixed(2)}</p>
+                <p>Interest: $${interest.toFixed(2)}</p>
+                <p><strong>Total Amount to Pay: $${totalAmount.toFixed(2)}</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="interest.js">
+    </script>
+</body>
+</html>

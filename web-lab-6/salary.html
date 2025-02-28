@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="salary.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Salary Calculator</h2>
+        <input type="number" id="experience" placeholder="Enter years of experience">
+        <button onclick="calculateAndDisplaySalary()">Calculate Salary</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const calculateSalary = (exp) => exp * 1000 + (exp > 5 ? 500 : 0);
+
+        function calculateAndDisplaySalary() {
+            let experience = parseInt(document.getElementById("experience").value);
+            let result = document.getElementById("result");
+
+            if (experience >= 0) {
+                let totalSalary = calculateSalary(experience);
+                result.innerHTML = `Years of Experience: ${experience}<br>Total Salary: $${totalSalary}`;
+            } else {
+                result.innerHTML = "Please enter a valid number of years.";
+            }
+        }
+    </script>
+</body>
+</html>
